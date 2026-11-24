@@ -18,3 +18,12 @@ Before writing or editing files, invoke the matching skills (all of the ones tha
 - If you detect a file has changed since you last saw it, match its new style or content instead of reverting it to what you last remember, as the humans (or other agents) probably made an edit to help you.
 - Do not use large blocks of characters to atract attention like `==== THING ====`; they're ugly.
 - Do not attempt to use GitHub's `gh` CLI nor Gitlab's `glab` unless explicitly told to do so.
+
+## Testes locais e GitHub Actions
+
+- Execute localmente os testes e as validações aplicáveis antes de abrir ou
+  atualizar um PR ou publicar diretamente na branch de deploy. Registre no PR
+  os comandos, os resultados e qualquer validação pendente.
+- O PR não executa essa validação. Reserve GitHub Actions para deploy na VPS,
+  incluindo artefatos necessários à publicação e a conferência de saúde do
+  serviço publicado. Mantenha testes, lint e revisão de PR fora do Actions.
